@@ -1,11 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const {obtenerEstado} = require('../controllers/health.controller')
 
-router.get('/',(req,res)=>{
-    res.status(200).json({
-        "ok": true,
-        "mensaje":"Api fundionando"
-    })
-})
+router.get('/', obtenerEstado)
 
 module.exports = router
